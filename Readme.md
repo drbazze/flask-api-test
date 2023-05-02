@@ -22,3 +22,8 @@ pip -V
 ```
 pip install -r requirements.txt
 ```
+
+## Run the project
+```
+python app.py
+```
