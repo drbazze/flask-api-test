@@ -1,5 +1,5 @@
 # Python API layer for the blueprint projects
-venv is used for managing the dependencies
+Flask API bluprint project in order to touch the basics of the API development, config management and TDD.
 
 ## Installation
 - First you make sure the venv is installed
@@ -25,5 +25,24 @@ pip install -r requirements.txt
 
 ## Run the project
 ```
-python app.py
+flask run
+```
+
+### Run the app in debug mode
+```
+flask run --debug
+```
+
+### Changing the environment
+```
+export CONFIGURATION_SETUP="config.ProductionConfig"
+```
+Possible config values:
+- config.ProductionConfig
+- config.DevelopmentConfig (Default)
+- config.TestingConfig
+
+## Unit testing
+```
+pytest -v
 ```
