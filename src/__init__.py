@@ -4,7 +4,12 @@ from config import Config
 from src.endpoints import status, root
 
 # Application Factory Function
-def create_server(config_class=Config):
+def create_server():
+    """
+    Create the flask server with it's endpoints
+
+    CONFIGURATION_SETUP environment variable sets the confiuration (test, dev, prod)
+    """
     app = Flask(__name__)
 
     # Configure the Flask application via CONFIGURATION_SETUP env

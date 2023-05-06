@@ -3,7 +3,9 @@ from src import create_server
 
 @pytest.fixture(scope='module')
 def test_client():
-    # Create a Flask app configured for testing
+    """
+    Creates a Flask app client configured for testing
+    """
     flask_app = create_server()
     flask_app.config.from_object('config.TestingConfig')
 
@@ -15,6 +17,9 @@ def test_client():
 
 @pytest.fixture(scope='module')
 def cli_test_client():
+    """
+    Creates a Flask cli app client configured for testing
+    """
     flask_app = create_server()
     flask_app.config.from_object('config.TestingConfig')
 
